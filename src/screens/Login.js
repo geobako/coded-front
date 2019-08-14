@@ -60,13 +60,15 @@ export default function Login(props) {
                 const data = {
                     email: email,
                     password: password
-                }
+                }    
+                
                 const loginResponse = await axios.post(`${keys.apiUrl}/auth/login`, data)
-                console.log(loginResponse.data)
+                console.log(loginResponse)
                 await AsyncStorage.setItem('token', loginResponse.data.token)
                 await AsyncStorage.setItem('id', loginResponse.data.user._id)
                 goToMoviesListing()
             } catch (error) {
+                console.log(error)
                 Alert.alert(
                     'A problem occured',
                     error.response.data.message,

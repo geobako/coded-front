@@ -1,4 +1,4 @@
 
 export default keys = {
-    apiUrl: 'http://192.168.1.10:5000'
+    apiUrl: 'http://20fc70b0.ngrok.io'
 }

@@ -43,6 +43,34 @@ then:
 ```
 react-native run-android
 ```
+
+After that run : 
+```
+npm install ngrok -g && ngrok http 5000
+```
+on a seperate terminal window.
+You will see something like this: 
+```
+ngrok by @inconshreveable                                                                                                  (Ctrl+C to quit)
+                                                                                                                                           
+Session Status                online                                                                                                       
+Session Expires               7 hours, 56 minutes                                                                                          
+Version                       2.3.34                                                                                                       
+Region                        United States (us)                                                                                           
+Web Interface                 http://127.0.0.1:4040                                                                                        
+Forwarding                    http://20fc70b0.ngrok.io -> http://localhost:5000                                                            
+Forwarding                    https://20fc70b0.ngrok.io -> http://localhost:5000                                                           
+                                                                                                                                           
+Connections                   ttl     opn     rt1     rt5     p50     p90   
+```
+Copy 
+```
+http://20fc70b0.ngrok.io
+```
+and paste it on src/util/config as apiUrl
+Then run the server
+
+
 Details
 --------------
 A user can register and login. After login a screen where several movies are listed appear where the user can press ny movie. Then, another screen appears
